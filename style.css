@@ -1,0 +1,72 @@
+body {
+    background-color: #e7ebee;
+}
+
+@keyframes cascade {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+  }
+
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.item {
+    opacity: 0;
+    margin-top: 1rem;
+    width: 18rem;
+    height: 5rem;
+    background-color: #FDFDFE;
+    border-radius: 1rem;
+    box-shadow:  0px 1rem 1.5rem -1rem #0000004d;
+    animation-name: cascade;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+}
+
+.item:nth-child(1) {
+    animation-delay: 400ms;
+}
+.item:nth-child(2) {
+    animation-delay: 450ms;
+}
+.item:nth-child(2) {
+    animation-delay: 500ms;
+}
+.item:nth-child(3) {
+    animation-delay: 550ms;
+}
+.item:nth-child(4) {
+    animation-delay: 600ms;
+}
+.item:nth-child(5) {
+    animation-delay: 650ms;
+}
+.item:nth-child(6) {
+    animation-delay: 700ms;
+}
+.item:nth-child(7) {
+    animation-delay: 750ms;
+}
+.item:nth-child(8) {
+    animation-delay: 800ms;
+}
+.item:nth-child(9) {
+    animation-delay: 850ms;
+}
