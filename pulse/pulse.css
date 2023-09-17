@@ -3,7 +3,7 @@
         transform: scale(0.8);
     }
 
-    2% {
+    20% {
         transform: scale(1.1);
     }
 
@@ -15,12 +15,11 @@
 body {
     display: flex;
     padding: 10rem;
-    justify-content: center;
+    justify-content: center; 
 }
 
 .heart-container {
-    animation: pulse 1s ease-in-out 0ms infinite;
-    animation-fill-mode: backwards;
+    animation: pulse 1000ms ease-in-out 0ms infinite;
 }
 
 .heart {
