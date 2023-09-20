@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+/* SPINNER */
+.spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin-right: -1rem;
+    opacity: 0;
+}
+
+.spinner.loading {
+    animation: rotation 3s linear infinite; 
+}
+
+@keyframes rotation {
+    0% {
+        opacity: 0;
+        margin-right: -1rem;
+    }
+
+    10% {
+        opacity: 1;
+        margin-right: 0.5rem;
+    }
+    90% { 
+        opacity: 1;
+        margin-right: 0.5rem;
+        transform: rotate(960deg); 
+    }   
+
+    95% { 
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 0;
+        margin-right: -1rem;
+        transform: rotate(1020deg); 
+    }
+  }
+
+
+/* BUTTON */
+.btn {
+  appearance: button;
+  background-color: #4D4AE8;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
+  border: 1px solid #4D4AE8;
+  border-radius: 1rem;
+  box-shadow: rgba(255, 255, 255, 0.15) 0 1px 0 inset,rgba(46, 54, 80, 0.075) 0 1px 1px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Inter,sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 0;
+  padding: .5rem 1rem;
+  text-align: center;
+  text-transform: none;
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+}
+
+.btn:focus:not(:focus-visible),
+.btn:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: #3733E5;
+  border-color: #3733E5;
+}
+
+
+.btn:active {
+  background-color: #3E3BBA;
+  background-image: none;
+  border-color: #3A38AE;
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset;
+}
+
+.btn:active:focus {
+  box-shadow: rgba(46, 54, 80, 0.125) 0 3px 5px inset, rgba(104, 101, 235, 0.5) 0 0 0 .2rem;
+}
+
+.btn.disabled {
+  background-image: none;
+  box-shadow: none;
+  opacity: .65;
+  pointer-events: none;
+}

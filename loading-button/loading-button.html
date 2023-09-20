@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Button</title>
+    <link rel="stylesheet" href="./loading-button.css">
+</head>
+<body>
+    <button id="btn" class="btn">
+        <div id="spinner" class="spinner"></div>
+        <span id="btn-body">Click Me</span>
+    </button>
+    <script>
+        const btn = document.getElementById("btn");
+        const btnBody = document.getElementById("btn-body");
+        const btnBodyOriginalText = btnBody.innerText; 
+        const spinner = document.getElementById("spinner");
+        btn.addEventListener("click", (e) => {
+            spinner.classList.add("loading");
+            btn.classList.add("disabled");
+            btnBody.innerText = "Loading";
+
+            setTimeout(() => {
+                spinner.classList.remove("loading");
+                btnBody.innerText = btnBodyOriginalText;
+                btn.classList.remove("disabled");
+            }, 3000)
+        });
+    </script>
+</body>
+</html>
