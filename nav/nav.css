@@ -1,0 +1,66 @@
+body {
+    display: flex;
+    padding-top: 10rem;
+    justify-content: center;
+}
+
+.w-6 {
+    width: 4rem;
+}
+.h-6 {
+    height: 4rem;
+}
+
+.tabs {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.tabs li {
+    position:static;
+    padding: 1rem;
+    cursor: pointer;
+    transition: color 0.5s, background-color 0.2s;
+    color: #9ea1a1;
+    border-radius: 99px;
+}
+
+.tabs li:not(.active):hover  {
+    color: #828888;
+    background-color: #d7d7e2;
+}
+
+.tabs li.active {
+    color: #fff;
+}
+
+.selected {
+    position: absolute;
+    z-index: -1;
+    width: 4rem;
+    height: 4rem;
+    background-color: #2096f7;
+    padding: 1rem;
+    border-radius: 99px;
+    color: white;
+    transition: margin-left 0.5s;
+}
+
+
+.selected.p-0 {
+    margin-left: 0rem;
+}
+.selected.p-1 {
+    margin-left: 8rem;
+}
+.selected.p-2 {
+    margin-left: 16rem;
+}
+.selected.p-3 {
+    margin-left: 24rem;
+}
+.selected.p-4 {
+    margin-left: 32rem;
+}
+
