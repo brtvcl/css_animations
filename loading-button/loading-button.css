@@ -3,6 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 5rem;
+    gap: 2rem;
 }
 
 /* SPINNER */
@@ -49,9 +50,42 @@ body {
     }
   }
 
+/* PROGRESS */
+@keyframes progress {
+  0% {
+      width: 0%;
+  }
+  
+  100% {
+      width: 100%;
+  }
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1;
+  z-index: 1;
+  width: 100%;
+  height: 2.5rem;
+}
+
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #7bbdfa5e;
+  animation: progress 4s ease-in infinite;
+  animation-play-state: paused;
+}
+.progress.playing {
+  animation-play-state: running;
+}
 
 /* BUTTON */
 .btn {
+  position: relative;
+  overflow: hidden;
   appearance: button;
   background-color: #4D4AE8;
   background-image: linear-gradient(180deg, rgba(255, 255, 255, .15), rgba(255, 255, 255, 0));
@@ -106,4 +140,27 @@ body {
   box-shadow: none;
   opacity: .65;
   pointer-events: none;
+}
+
+
+.btn-body {
+  z-index: 2;
+}
+
+/* PRIMARY BUTTON */
+.btn.primary {
+  background-color: #2e6bef;
+  border: 1px solid #3a71e9;
+}
+
+
+.btn.primary:hover {
+  background-color: #2d68e6;
+  border-color: #346ce5;
+}
+
+
+.btn.primary:active {
+  background-color: #3b63ba;
+  border-color: #5176c8;
 }

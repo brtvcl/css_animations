@@ -5,27 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loading Button</title>
     <link rel="stylesheet" href="./loading-button.css">
+    <link rel="stylesheet" href="./progress.button.css">
 </head>
 <body>
-    <button id="btn" class="btn">
-        <div id="spinner" class="spinner"></div>
-        <span id="btn-body">Click Me</span>
+    <button id="btn-spinner" class="btn">
+        <div class="spinner"></div>
+        <span class="btn-body">Click Me</span>
     </button>
+    <button id="btn-progress" class="btn primary">
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+        <span class="btn-body">
+            Also Me
+        </span>
+    </button>
+    
     <script>
-        const btn = document.getElementById("btn");
-        const btnBody = document.getElementById("btn-body");
-        const btnBodyOriginalText = btnBody.innerText; 
-        const spinner = document.getElementById("spinner");
-        btn.addEventListener("click", (e) => {
+        // Spinner Button
+        const btnSpinner = document.getElementById("btn-spinner");
+        
+        btnSpinner.addEventListener("click", (e) => {
+            const btnBody = btnSpinner.querySelector(".btn-body");
+            const spinner = btnSpinner.querySelector(".spinner");
+            const btnBodyOriginalText = btnBody.innerText; 
+            
             spinner.classList.add("loading");
-            btn.classList.add("disabled");
+            btnSpinner.classList.add("disabled");
             btnBody.innerText = "Loading";
 
             setTimeout(() => {
                 spinner.classList.remove("loading");
                 btnBody.innerText = btnBodyOriginalText;
-                btn.classList.remove("disabled");
-            }, 3000)
+                btnSpinner.classList.remove("disabled");
+            }, 3000);
+        });
+
+        // Progress Button
+        const btnProgress = document.getElementById("btn-progress");
+
+        btnProgress.addEventListener("click", (e) => {
+            const progress = btnProgress.querySelector(".progress");
+            const btnBody = btnProgress.querySelector(".btn-body");
+            const btnBodyOriginalText = btnBody.innerText; 
+            progress.classList.add("playing");
+            btnProgress.classList.add("disabled");
+            btnBody.innerText = "Loading";
+
+            setTimeout(() => {
+                progress.classList.remove("playing");
+                btnProgress.classList.remove("disabled");
+                btnBody.innerText = btnBodyOriginalText;
+            }, 4000)
         });
     </script>
 </body>
