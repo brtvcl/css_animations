@@ -1,7 +1,22 @@
+html {
+    font-size: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 8px;
+    }
+}
+
 body {
     display: flex;
     padding-top: 10rem;
     justify-content: center;
+}
+
+ul {
+    margin-block-start: 0;
+    padding: 0;
 }
 
 .w-6 {

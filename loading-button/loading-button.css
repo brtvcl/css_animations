@@ -1,8 +1,9 @@
 body {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-    padding: 5rem;
+    padding: 5rem 2rem;
     gap: 2rem;
 }
 
