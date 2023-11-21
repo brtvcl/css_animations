@@ -1,0 +1,27 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fit {
+  0% {
+    transform: translate(200px, 0);
+  }
+
+  50% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(0, 200px);
+  }
+}
+
+#puzzle {
+  animation: fit 1000ms ease-in-out 0ms forwards;
+}
